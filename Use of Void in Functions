@@ -1,0 +1,38 @@
+/******************************************************************************
+    demo on passing array to a function [call by reference]
+*******************************************************************************/
+#include <stdio.h>
+
+// declare function prototypes
+void sumArray(int array[], int len,int *sum);
+
+int main()
+{
+    // declare and initialise working storage
+    int array[10] = {1,2,3,4,5,6,7,8,9,0};
+    int len = 0;    // holds the length of the array
+    int sum = 0;    // holds the sum of the array
+    
+    // compute the length of the array
+    len = sizeof(array) / sizeof(int);
+    
+    // pass the array to a function: sumArray()
+    // return the sum to main()
+    sumArray(array, len,&sum);
+    
+    // print the results
+    printf("\n\n\tThe sum of the array is %d", sum);
+
+    return 0;
+}
+
+void sumArray(int array[], int len,int *sum)
+    {
+        int counter = 0;    // generic loop counter
+
+        
+        for(counter = 0; counter < len; counter++)
+            {
+                *sum = *sum + array[counter];
+            }
+    }        
