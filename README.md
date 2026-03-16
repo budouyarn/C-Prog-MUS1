@@ -78,10 +78,10 @@ the value. Using a function to calculate different type of property type. Using 
 
    <img width="500" height="495" alt="image" src="https://github.com/user-attachments/assets/1f2b6130-a3f5-49a9-b619-f3761b2eaace" /><img width="573" height="693" alt="image" src="https://github.com/user-attachments/assets/29a35100-09f3-4e9c-bbbe-02d525bd940d" /><img width="511" height="593" alt="image" src="https://github.com/user-attachments/assets/211132bc-4295-42c1-9a00-02a9a0231daa" />   
 
-   -Ability of programme to ask for user’s sales input data for every month,and are able to give a report summary on the lowest sales, highest sales, the sum of all sales(Total Sales) and Average Sales.   
--Programme is able to process user’s choice to verify if record exist in the array. It is also able to bring user back to the menu for other choices soonafter.
--Option L will allow user to access the selection sorted list of sales data in ascending format. This proves that the sales data was able to be passed into sorting function.
--Error Handling of incorrect Option entered, will prompt user that option is incorrect and given the option to re-enter again.
+   -Ability of programme to ask for user’s sales input data for every month,and are able to give a report summary on the lowest sales, highest sales, the sum of all sales(Total Sales) and Average Sales.     
+   -Programme is able to process user’s choice to verify if record exist in the array. It is also able to bring user back to the menu for other choices soonafter.   
+   -Option L will allow user to access the selection sorted list of sales data in ascending format. This proves that the sales data was able to be passed into sorting function.   
+   -Error Handling of incorrect Option entered, will prompt user that option is incorrect and given the option to re-enter again.
 
 
 
