@@ -1,0 +1,58 @@
+/******************************************************************************
+    prompt the user to enter a sentence > 30 characters
+    count and display the vowels in the sentence
+        - vowels: a e i o u
+*******************************************************************************/
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    // declare and initialise working storage
+    char sen[50];       // string buffer to holds the user input
+    int len = 0;        // holds the length of the sentence
+    int counter = 0;    // generic loop counter
+    int acount = 0;     // 'a' counter
+    int ecount = 0;
+    int icount = 0;
+    int ocount = 0;
+    int ucount = 0;
+    
+    // prompt the user to enter a sentence > 30 characters 
+    printf("\n\tPlease enter a sentence (> 30 characters) : ");
+    scanf("%[^\n]", sen);
+    
+    // find the length of the sentence
+    len = strlen(sen);
+    
+    // parse and count the numbers of vowels
+    for(counter = 0; counter < len; counter++)
+        {
+            switch(sen[counter])
+                {
+                    case 'a': case 'A':
+                            acount++;
+                            break;
+                    case 'e': case 'E':
+                            ecount++;
+                            break;
+                    case 'i': case 'I':
+                            icount++;
+                            break;                            
+                    case 'o': case 'O':
+                            ocount++;
+                            break;                            
+                    case 'u': case 'U':
+                            ucount++;
+                }
+        }
+    // display results
+    printf("\n\n\tYou have entered : %s", sen);
+    printf("\n\n\tThe number of 'a' is %d", acount);
+    printf("\n\tThe number of 'e' is %d", ecount);
+    printf("\n\tThe number of 'i' is %d", icount);    
+    printf("\n\tThe number of 'o' is %d", ocount);    
+    printf("\n\tThe number of 'u' is %d", ucount);
+    
+    return 0;
+}
