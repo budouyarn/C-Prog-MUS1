@@ -15,7 +15,7 @@ Through my previous beginning practices learning Python coding, I was able to gr
    - Arrays were something lightly touched on in python, where linked list were mostly more utilised back in my practices.
    - I learned so much more in saving input and storing them in an array, which then using functions to manipulate the data.
    - Dynamic arrays were pretty much a new concept to me, where the idea of creating a dynamic array makes flows so much flexiblle by uses allocating memory on the heap using malloc() and calloc().
-   - 
+     
 5) Characters and Strings.
    -Using the char data type and understanding ASCII values.
    -Reading and writing individual characters with getchar() / putchar().
@@ -41,7 +41,7 @@ Through my previous beginning practices learning Python coding, I was able to gr
 
 9) Modularity
 -Good C programs are split across multiple files for maintainability and reuse. This project demonstrates modularity through:
-  -Header files (.h) — contain function prototypes, constants (#define), and type definitions shared across files.  
+   -Header files (.h) — contain function prototypes, constants (#define), and type definitions shared across files.  
   -Source files (.c) — contain function implementations, each file grouped by logical responsibility.  
   -Include guards — #ifndef / #define / #endif blocks in every header to prevent double inclusion.  
   -main.c — serves as the entry point only; all logic is delegated to dedicated modules.
