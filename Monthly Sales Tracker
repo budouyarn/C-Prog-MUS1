@@ -1,0 +1,171 @@
+/******************************************************************************
+Part 3: Monthly Sales Tracker
+//Prompt user to enter 12 monthly sales figure and store in 1D array
+
+//Perform various calculations on the data 
+//Identify which months had the minimum and maximum sales.
+
+//sort the array in ascending order using any standard sorting algoithm
+// Allow the user to see a sorted list of sales in ascending order.
+
+//Provide some simple search functionality 
+
+Indicate if the sales value exists in the array(and which months had that value)
+// simple linear search, or if you want to illustrate binary search,
+do so after sorting.
+(using a 2D array to match the month and the sales)
+Print a summary report 
+//Original monthly sales data, Sorted monthly sales data
+//Total, average, min, and max
+//Search results (After simple search function)
+
+Error messages:
+//If the user enters a negative or otherwise invalid sales figure, prompt them
+to re-enter.
+
+*******************************************************************************/
+#include <stdio.h>
+#include<string.h>
+//selection sort function to sort values from lowest to highest
+void selectionSort(float arr[][2], int length);
+// function to find sum of all sales value
+float findSum(float sales[][2],int length);
+//function header for search functionality
+int findSales(float data[][2], int length, float targetSales, int targetMonth);
+
+int main()
+{
+    // declare and initialise working storage
+    int counter=0;//generic loop counter
+    float salesData[12][2]; //variable hold in 2D array format of 12 rows, 2 column
+    int length =12;   //holds the value of array length
+    float average=0; // holds the average values
+    float total=0;   // hold value to call back sum function
+    int target=0;  // holds value of search function
+    int result=0;  // holds value to call back search function
+    char choice;   // holds character value to trigger different action
+    
+    
+    // prompt the user to enter sales value for each month
+    for (int counter = 0; counter < length; counter++) {
+        salesData[counter][0] = counter + 1; // defining the counter as the month
+        printf("\tPlease enter sales value [$] for Month %.0f: ", salesData[counter][0]); // values are in %.0f as generalised to be float but displayed as integer.
+        scanf("%f", &salesData[counter][1]);//storage of sales data where [counter][0] refers to the month column
+
+        // Error message loop for negative inputs
+        while (salesData[counter][1] < 0) {
+            printf("\n\t Error! Sales cannot be negative. Please Re-enter for Month %.0f: ", salesData[counter][0]);
+            scanf("%f",&salesData[counter][1]); //allows programm to save user input again
+        }
+    }
+    
+//call function back to compute sum of data
+ total = findSum(salesData, length);
+ average = total / length; // finding average of data
+
+    // call back sorting function that has sorted values to lowest to highest
+    selectionSort(salesData, length);
+
+    // Report values of the lowest and highest sales, total sum and average sales.
+    printf("\n\t Monthly Sales Report");
+    printf("\n\t===============================");
+    printf("\n\tLowest Sales:  $%.2f (Month %.0f)", salesData[0][1], salesData[0][0]);
+    printf("\n\tHighest Sales: $%.2f (Month %.0f)", salesData[11][1], salesData[11][0]);
+    printf("\n\tTotal Sales:   $%.2f", total);
+    printf("\n\tAverage Sales: $%.2f", average);
+    
+    //create a menu for user to continue or exit the programm
+    do {             //a do first check in choice answers
+        printf("\n\t=============================");
+        printf("\n\t[Side Menu]");
+        printf("\n\t Option V: Verify a record (Search)");
+        printf("\n\t Option L: List all sorted sales");
+        printf("\n\t Option Q: Quit program");
+        printf("\n\t Please enter a Option to continue[V/L/Q]: ");
+        scanf(" %c", &choice);
+
+        switch (choice) {      //'v' choice will allow users to perform binary function search
+            case 'V': 
+            case 'v': {
+                int searchMonth;
+                float searchSales;
+                printf("\n\tEnter Month (1-12): ");
+                scanf("%d", &searchMonth);
+                printf("\n\tEnter Sales amount to verify: ");
+                scanf("%f", &searchSales);
+
+                if (findSales(salesData, length, searchSales, searchMonth)){
+                    printf("\n\t Record exists for Month %d.", searchMonth);
+                } else {
+                    printf("\n\t Data does not match our records.Please try again.");
+                }
+                break;
+            }
+            case 'L':        //'L' choice value will allow users to see their sorted list
+            case 'l':
+                printf("\n\t Sorted Sales List (Ascending Order)");
+                printf("\n\t=====================================");
+                for (counter = 0; counter < length; counter++) {
+                    printf("\n\tMonth %.0f: $%.2f", salesData[counter][0], salesData[counter][1]);
+                }
+                break;
+                
+            case 'Q':   // 'Q' choice value will allow users to exit the programm
+            case 'q':
+                printf("\n\t Thank you and goodbye!\n");
+                break;
+                
+            default:  //print out invalid options
+            printf("\n\t Invalid Input! Please enter V, L, or Q.\n");
+            break;
+        }
+//while second check, where it will not end the programm, unless 'Q' entered
+    } while (choice != 'Q' && choice != 'q'); 
+    
+    return 1;
+}
+// Function to perform Selection Sort on a 2D array based on the Sales column
+void selectionSort(float data[][2], int length) {
+    int counter=0; //initialise counter 
+    int innerloop=0; //initialise the innter loop
+    int outerloop=0; //initialise outerloop
+    
+    //define the current work space of month and sales before swapping
+    for (counter = 0; counter < length - 1; counter++) { 
+        int lowest = counter; // define the counter variable 
+        for ( outerloop = counter + 1; outerloop < length; outerloop++) { 
+            if (data[outerloop][1] < data[lowest][1]) { //assumming where counter starts as the lowest
+                lowest = outerloop;
+            }
+        }
+        // Swapping of month and sales 
+        for (innerloop= 0; innerloop < 2; innerloop++) { //innerloop will swap the values according to their month
+            float temp = data[lowest][innerloop]; //placing the lowest value into temp placements
+            data[lowest][innerloop] = data[counter][innerloop]; // using the empty variable to hold month value
+            data[counter][innerloop] = temp; // matching the month to the lowest value.
+        }
+    }
+}
+
+// Function to calculate sum from the 2D array
+float findSum(float data[][2], int length) {
+    float sum = 0;//initialise variable as 0
+    int counter=0;//initialising counter as 0
+    for (counter = 0; counter < length; counter++) {
+        sum += data[counter][1]; 
+    }
+    return sum;
+}
+
+// Function to search for a specific month/sales pair
+int findSales(float data[][2], int length, float targetSales, int targetMonth) {
+    int counter=0; //initialise counter to 0
+
+    for (counter = 0; counter < length; counter++) {
+        // matching the sales data and month data to appropriate variable holder
+        if ((int)data[counter][0] == targetMonth && data[counter][1] == targetSales) {
+            return 1; // return values back as a match
+        }
+    }
+    return 0; // return values back as non match
+}
