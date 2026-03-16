@@ -14,20 +14,20 @@ Through my previous beginning practices learning Python coding, I was able to gr
 Arrays were something lightly touched on in python, where linked list were mostly more utilised back in my practices.
 
 [What is something new in C programme that I learned?]	
--I learned so much more in saving input and storing them in an array, which then using functions to manipulate the data.	
--Dynamic arrays were pretty much a new concept to me, where the idea of creating a dynamic array makes flows so much flexiblle. 	
--Dynamic arrays uses allocating memory on the heap using malloc() and calloc().	
--Including Freeing memory with free() to prevent memory leaks.	
--Checking allocation success by verifying that returned pointers are not NULL.
+1) I learned so much more in saving input and storing them in an array, which then using functions to manipulate the data.
+2) Dynamic arrays were pretty much a new concept to me, where the idea of creating a dynamic array makes flows so much flexiblle.
+3) Dynamic arrays uses allocating memory on the heap using malloc() and calloc().
+4) Including Freeing memory with free() to prevent memory leaks.	  
+5) Checking allocation success by verifying that returned pointers are not NULL.
 
 3. Characters and Strings
 
 [What is something new in C programme that I learned?	
--Using the char data type and understanding ASCII values.	
--Reading and writing individual characters with getchar() / putchar().	
--Working with character arrays (C strings) and the null terminator \0.	
--Using standard library functions from <string.h> such as strlen(), strcpy(), strcmp(), and strcat().	
--Classifying characters using <ctype.h> functions like isalpha(), isdigit(), and toupper().
+Using the char data type and understanding ASCII values.	  
+Reading and writing individual characters with getchar() / putchar().	  
+Working with character arrays (C strings) and the null terminator \0.	  
+Using standard library functions from <string.h> such as strlen(), strcpy(), strcmp(), and strcat().	  
+Classifying characters using <ctype.h> functions like isalpha(), isdigit(), and toupper().
 
 Example use case: reversing a string in-place and converting it to uppercase.
 
