@@ -1,0 +1,41 @@
+/******************************************************************************
+    Prompt the user to enter a message > 30 characters
+    Display the message
+    Convert the message to uppercase
+    Create a new (dynamic array) string that can stored the converted message
+    Display both strings
+*******************************************************************************/
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+
+int main()
+{
+    // declare and initialise working storage
+    int counter = 0;
+    int len = 0;
+    char mess1[100];    // holds the first string
+
+    // prompt user to enter a message
+    printf("\n\tPlease enter a sentence > 30 characters : ");
+    scanf("%[^\n]s", mess1);
+    
+    // compute the length of the message
+    len = strlen(mess1);
+    
+    // you can do this but should try using malloc()
+    char mess2[len];
+    
+    // convert mess1 to uppercase and store in mess2
+    for(counter = 0; counter < len; counter++)
+        {
+            mess2[counter] = toupper(mess1[counter]);
+        }
+
+    // print both strings
+    printf("\n\n\tString1 = %s", mess1);
+    printf("\n\tString2 = %s", mess2);
+
+    return 0;
+}
