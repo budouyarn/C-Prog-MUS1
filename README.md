@@ -23,50 +23,52 @@ Arrays were something lightly touched on in python, where linked list were mostl
 3. Characters and Strings
 
 [What is something new in C programme that I learned?	
-Using the char data type and understanding ASCII values.	  
-Reading and writing individual characters with getchar() / putchar().	  
-Working with character arrays (C strings) and the null terminator \0.	  
-Using standard library functions from <string.h> such as strlen(), strcpy(), strcmp(), and strcat().	  
-Classifying characters using <ctype.h> functions like isalpha(), isdigit(), and toupper().
+-Using the char data type and understanding ASCII values.	  
+-Reading and writing individual characters with getchar() / putchar().	  
+-Working with character arrays (C strings) and the null terminator \0.	  
+-Using standard library functions from <string.h> such as strlen(), strcpy(), strcmp(), and strcat().	  
+-Classifying characters using <ctype.h> functions like isalpha(), isdigit(), and toupper().
 
 Example use case: reversing a string in-place and converting it to uppercase.
 
 4. Pointers and Addresses
 [What is something new in C programme that I learned?]
 
--Declaring and initialising pointers using the address-of operator &.	
--Dereferencing pointers with * to read and modify values.	
--Pointer arithmetic — advancing through arrays by incrementing pointer addresses.	
--The relationship between arrays and pointers.	
--Passing pointers to functions to enable pass-by-reference behaviour.	
+-Declaring and initialising pointers using the address-of operator &.	  
+-Dereferencing pointers with * to read and modify values.	  
+-Pointer arithmetic — advancing through arrays by incrementing pointer addresses.	  
+-The relationship between arrays and pointers.	  
+-Passing pointers to functions to enable pass-by-reference behaviour.	  
 -Double pointers (**) for modifying pointer variables inside functions.
 
 5. Functions
 
 [What is something new in C programme that I learned?]
 
--Declaring functions with appropriate return types and parameter lists.	
--Separating function declaration (prototype) from definition.
--Passing arguments by value and by pointer (reference).
--Returning values from functions, including returning pointers to heap-allocated data.
+-Declaring functions with appropriate return types and parameter lists.	  
+-Separating function declaration (prototype) from definition.  
+-Passing arguments by value and by pointer (reference).  
+-Returning values from functions, including returning pointers to heap-allocated data.  
 -Recursive functions — functions that call themselves to solve problems like factorial calculation or binary search.
-
--All functions follow a single-responsibility principle: each function does one thing and does it well.
+  
+  
+  -All functions follow a single-responsibility principle: each function does one thing and does it well.
 
 6. Modularity
 
 [What is something new in C programme that I learned?]
 -Good C programs are split across multiple files for maintainability and reuse. This project demonstrates modularity through:
 
--Header files (.h) — contain function prototypes, constants (#define), and type definitions shared across files.
--Source files (.c) — contain function implementations, each file grouped by logical responsibility.
--Include guards — #ifndef / #define / #endif blocks in every header to prevent double inclusion.
+-Header files (.h) — contain function prototypes, constants (#define), and type definitions shared across files.  
+-Source files (.c) — contain function implementations, each file grouped by logical responsibility.  
+-Include guards — #ifndef / #define / #endif blocks in every header to prevent double inclusion.  
 -main.c — serves as the entry point only; all logic is delegated to dedicated modules.
 
 
 7.Sorting Algorithms
 [What is something new in C programme that I learned?]
--Linear Search — explains the sequential scan approach, shows the C implementation with an early return on match, and covers best/worst case complexity (O(1) to O(n)).
+
+-Linear Search — explains the sequential scan approach, shows the C implementation with an early return on match, and covers best/worst case complexity (O(1) to O(n)).  
 -Bubble Sort — covers the nested-loop comparison-and-swap logic, includes the swapped flag optimisation for early exit on already-sorted data, and notes best/worst case complexity (O(n) to O(n²)).
 
 Practise Index:		
