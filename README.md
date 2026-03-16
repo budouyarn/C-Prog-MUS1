@@ -9,27 +9,28 @@ Through my previous beginning practices learning Python coding, I was able to gr
 [What is something new in C programme that I learned?]
 1) In C Programme, I further learned the exitence of a do while lopp, than just a simple while loop with no existence of an exit, such as  #include<stdbool.h> to use a True False value to control the while loop re-iterations
 
-3) I further explored the usage of Nested loops which can be useful when processing 2D arrays or generating patterns. Especially when it comes to swapping of values in order to facilitate linear search functions.
+3) I further explored the usage of Nested loops which can be useful when processing 2D arrays or generating patterns.
+   Especially when it comes to swapping of values in order to facilitate linear search functions.
 
-4) Arrays & Dynamic Arrays.
+5) Arrays & Dynamic Arrays.
    - Arrays were something lightly touched on in python, where linked list were mostly more utilised back in my practices.
    - I learned so much more in saving input and storing them in an array, which then using functions to manipulate the data.
    - Dynamic arrays were pretty much a new concept to me, where the idea of creating a dynamic array makes flows so much flexiblle by uses allocating memory on the heap using malloc() and calloc().
      
-5) Characters and Strings.
+6) Characters and Strings.
    -Using the char data type and understanding ASCII values.
    -Reading and writing individual characters with getchar() / putchar().
    -Working with character arrays (C strings) and the null terminator \0.Using standard library functions from <string.h> such as strlen(), strcpy(), strcmp(), and strcat().
    -Classifying characters using <ctype.h> functions like isalpha(), isdigit(), and toupper().
    
-6) Pointers and Addresses.Declaring and initialising pointers using the address-of operator &.	  
+7) Pointers and Addresses.Declaring and initialising pointers using the address-of operator &.	  
     -Dereferencing pointers with * to read and modify values.	  
     -Pointer arithmetic — advancing through arrays by incrementing pointer addresses.	  
     -The relationship between arrays and pointers.	  
     -Passing pointers to functions to enable pass-by-reference behaviour.	  
     -Double pointers (**) for modifying pointer variables inside functions.
 
-7) Functions
+8) Functions
 -All functions follow a single-responsibility principle: each function does one thing and does it well.
   -Declaring functions with appropriate return types and parameter lists.	  
   -Separating function declaration (prototype) from definition.  
