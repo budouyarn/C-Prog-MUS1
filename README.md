@@ -20,13 +20,6 @@ Dynamic arrays uses allocating memory on the heap using malloc() and calloc().
 Including Freeing memory with free() to prevent memory leaks.
 Checking allocation success by verifying that returned pointers are not NULL.
 
-Example use case: building a dynamically growing list of integers entered by the user.
-cint *arr = malloc(capacity * sizeof(int));
-if (arr == NULL) {
-    fprintf(stderr, "Memory allocation failed\n");
-    exit(EXIT_FAILURE);
-}
-
 3. Characters and Strings
 
 [What is something new in C programme that I learned?
@@ -47,13 +40,6 @@ Pointer arithmetic — advancing through arrays by incrementing pointer addresse
 The relationship between arrays and pointers.
 Passing pointers to functions to enable pass-by-reference behaviour.
 Double pointers (**) for modifying pointer variables inside functions.
-
-cint value = 42;
-int *ptr = &value;
-
-printf("Value:   %d\n", value);
-printf("Address: %p\n", (void *)ptr);
-printf("Via ptr: %d\n", *ptr);
 
 5. Functions
 
@@ -83,26 +69,7 @@ main.c — serves as the entry point only; all logic is delegated to dedicated m
 Linear Search — explains the sequential scan approach, shows the C implementation with an early return on match, and covers best/worst case complexity (O(1) to O(n)).
 Bubble Sort — covers the nested-loop comparison-and-swap logic, includes the swapped flag optimisation for early exit on already-sorted data, and notes best/worst case complexity (O(n) to O(n²)).
 
-Extras:
-How to Compile and Run
-Requirements
 
-GCC (GNU Compiler Collection) or any C99-compatible compiler
-Linux / macOS terminal, or Windows with MinGW / WSL
-
-Compile all modules
-bashmake
-Or manually with GCC:
-bashgcc -Wall -Wextra -std=c11 -o assessment \
-    main.c \
-    loops/loops.c \
-    dynamic_array/dynamic_array.c \
-    strings/strings.c \
-    pointers/pointers.c \
-    functions/functions.c
-Run
-bash./assessment
-Clean build artefacts
 bashmake clean
 
 
