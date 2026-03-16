@@ -1,1 +1,75 @@
+/* =======================================================================================
+    Write a C program that does the following:
+        1.  Prompt the user to enter 3 numbers (that represents the 3 sides 
+            of a triangle)
+        2.  Pass the 3 numbers to a function: chkValidTriangle()
+        3.  The function should return a value that determines
+            if the the 3 sides can form a 
+            3.1 equilateral
+            3.2 issoceles
+            3.3 scalene
+            3.4 invalid
+        4.  Print the result in the main()
+======================================================================================= */
+#include <stdio.h>
 
+// declare function prototypes
+int chkValidTriangle(int sideA, int sideB, int sideC, int flag);
+
+int main()
+{
+    // declare and initialise working storage
+    int sideA = 0;  // holds the user input
+    int sideB = 0;
+    int sideC = 0;
+    int flag = 0;   // holds the return value 
+                    // 1 - equilateral, 2 - issoceles, 3 - scalene, 4 - invalid
+    
+    // prompt the user to enter 3 numbers
+    printf("\n\n\tPlease enter the first side of a triangle : ");
+    scanf("%d", &sideA);
+    printf("\n\tPlease enter the second side of a triangle : ");
+    scanf("%d", &sideB);    
+    printf("\n\tPlease enter the third side of a triangle : ");
+    scanf("%d", &sideC);    
+    
+    // invoke function: return value - 1 for equilateral,
+    // 2 for issoceles, 3 for scalene and 4 for invalid
+    flag = chkValidTriangle(sideA, sideB, sideC, flag);
+    
+    // print the result
+    switch(flag)
+        {
+            case 1: printf("\n\t\tIt's an Equilateral Triangle!");
+                    break;
+            case 2: printf("\n\t\tIt's an Issoceles Triangle!");
+                    break;            
+            case 3: printf("\n\t\tIt's a Scalene Triangle!");
+                    break;            
+            case 4: printf("\n\t\tInvalid! The sum of the lengths of any two sides"); 
+                    printf("\n\t\tof a triangle must be greater than the length of"); 
+                    printf("\n\t\tthe third side."); 
+                    break;            
+        }
+
+    return 0;
+}
+
+int chkValidTriangle(int sideA, int sideB, int sideC, int flag)
+    {
+        // what are the rules that makes up a valid triangle?
+        // The Rule: The sum of the lengths of any two sides 
+        // of a triangle must be greater than the length of 
+        // the third side.
+        // return value: 1 - equilateral, 2 - issoceles, 3 - scalene, 4 - invalid
+        
+        if ((sideA + sideB) < sideC || (sideA + sideC) < sideB || (sideB + sideC) < sideA)
+            {
+                return 4;
+            }
+            
+        if (sideA == sideB == sideC)
+            {
+                return 1;
+            }
+    }
