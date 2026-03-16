@@ -77,32 +77,6 @@ Source files (.c) — contain function implementations, each file grouped by log
 Include guards — #ifndef / #define / #endif blocks in every header to prevent double inclusion.
 main.c — serves as the entry point only; all logic is delegated to dedicated modules.
 
-Project File Structure
-assessment/
-│
-├── main.c              # Entry point — ties modules together
-│
-├── loops/
-│   ├── loops.h         # Loop demonstration prototypes
-│   └── loops.c         # Loop implementations
-│
-├── dynamic_array/
-│   ├── dynamic_array.h # Dynamic array prototypes & structs
-│   └── dynamic_array.c # malloc/realloc/free implementations
-│
-├── strings/
-│   ├── strings.h       # Character & string function prototypes
-│   └── strings.c       # String manipulation implementations
-│
-├── pointers/
-│   ├── pointers.h      # Pointer demonstration prototypes
-│   └── pointers.c      # Address, dereference, arithmetic demos
-│
-├── functions/
-│   ├── functions.h     # Utility function prototypes
-│   └── functions.c     # Recursive and utility function implementations
-│
-└── Makefile            # Build rules for compiling all modules
 
 7.Sorting Algorithms
 [What is something new in C programme that I learned?]
