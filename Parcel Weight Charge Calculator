@@ -1,0 +1,98 @@
+/******************************************************************************
+
+Design an algorithm that will prompt for, receive the parcel weight, calculate the delivery
+charge and print the value. The program is to repeat the processing until a sentinel weight
+of 0 is entered.
+
+Design:
+//Break down the requirements use a sentinel loop.
+//a separate function for calculating charges.
+
+//Implement: Write modular code in C, using correct loops/conditions
+
+Test: Use a few test weights to confirm correct charges are printed (including
+edge cases: <3 kg, between 3–5 kg, above 5 kg, and exceeding 25 kg).
+
+Functionality:
+//The program repeatedly asks the user for a parcel weight.
+//If the user enters 0 (or a negative number), it stops processing.
+//Otherwise, it calls the computeCharge function to calculate the cost.
+//Finally, it prints the calculated delivery charge.
+
+*******************************************************************************/
+#include<stdio.h>
+#include<stdbool.h>
+float calculate_delivery(float weight){// function for delivery charge calculation
+   //declare and initialise holding variables
+   
+    float totalCharge = 0; //variable to hold additional and initial weight charges
+    float extra_weight=0; // variable will hold additional charges for extra weight
+    
+// using selection to determine different range of delivery fee for different weight
+    if (weight >= 1.00 && weight <= 3.00) { //creating boundary of weight for $8.00 weight charges
+        totalCharge = 8.00; 
+    } 
+    else if (weight > 3.00 && weight <= 5.00) { //creating boundary of weight for $ 12.00 charges
+        totalCharge = 12.00;
+    } 
+    else if (weight > 5.00 && weight <= 25.00) { 
+        //  for additional weight charges
+         extra_weight = weight - 5.0; // defining extra weight aside from the initial boundary stated above
+        totalCharge = 12.00 + (extra_weight * 1.50); // addition of 2nd condition and additional weight costs
+    } 
+    else {
+        // Return a negative value to printf an invalid weight response to main()
+        totalCharge = -1.0; 
+    }
+
+    return totalCharge;//return total charge back to main
+}
+ 
+
+int main() {
+    //declare and initialise variable
+    int choice=0; // variable to contain user's option of usage
+    float fee = 0; // value to hold fee value
+    bool running = true;  // bool to indicate true or false within while loop
+    float weight = 0; // variable to hold weight value
+
+    printf("\n\tWelcome to Next-Day Delivery Service.");
+//prompt user to enter option 1 to continue with programm/ option 0 to exit the programm.
+
+    while (running) { //programme will continue to run until running variable becomes false
+        printf("\n\tTo continue, please enter an option");
+        printf("\n\tOption 1: Enter 1 to calculate delivery charges");
+        printf("\n\tOption 0: Enter 0 to exit the programme");
+        printf("\n\tPlease enter your option [1/0]: ");
+        scanf("%d", &choice);
+        // switch case as selector for choice
+        switch (choice) {
+            case 1:
+                printf("\n\tPlease enter your parcel weight (kg): ");
+                //using a selection to print out error message
+                scanf("%f", &weight);
+                
+                // call by value function into main
+                fee = calculate_delivery(weight);  //print out final delivery fee after passing weight through function.
+                
+                if (fee > 0) {
+                    printf("\n\tThe Delivery charge is: $%.2f\n", fee);   //prints out the results if there is a fee for weight entered
+                } 
+                else {
+                    printf("\n\tError: Please enter a weight between 1.0kg and 25.0kg\n");  // prints out error if unable to compute fee
+                }
+                break;
+            //boolean false answer to exit the programme
+           case 0 :{
+                running = false; // 0 will assign running to be false value and exits the programme
+                printf("\n\tGoodbye!"); // print exit message
+             return 0;
+               }
+             
+             
+           
+            
+        }
+    }
+   
+}
