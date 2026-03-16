@@ -1,0 +1,46 @@
+/******************************************************************************
+    Exercise on pointer as array
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //declare and intialise variables
+    int *student = NULL;    // pointer for the array
+    int counter =0;     // generic loop counter
+    int num = 0;       // holds the number of students
+
+    // prompt the user to enter the number of students    
+    printf("\n\n\tPlease enter the number of students : ");
+    scanf("%d", &num);
+    
+    // create dynamic array on the fly
+    student = (int*) malloc(num * sizeof(int));
+
+    // prompt the user to enter the scores    
+    for (counter = 0; counter < num; counter++)
+        {
+            if (counter == num -1)
+                {
+                    printf("\n\tPlease enter the LAST student's score : ");                    
+                }
+            else
+                {
+                    printf("\n\tPlease enter the #%d student's score : ", counter + 1);
+                }
+            scanf("%d", student + counter);
+        }        
+
+    // display the array contents
+    printf("\n\n\tStudent Scores\n\t==============");
+    for (counter = 0; counter < num; counter++)
+        {
+            printf("\n\tStudent[%d] = %d", counter, *student + counter);
+        }        
+   
+    // free memory 
+    free(student);
+ 
+    return 0;
+}
