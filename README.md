@@ -65,7 +65,7 @@ Function allows the addition of additional vlaues needed.
 -In figure 5, it shows the programme’s ability to detect out of boundary weight values, and are able to bring the user back to the menu in the events where they choose to exit the programme.
 
 
-3. Property Stamp Duty Calculator-Design an algorithm that will prompt for and receive the purchase price of a property and property type (residential or non-residential) and calculate the buyer’s stamp duty and print
+2. Property Stamp Duty Calculator-Design an algorithm that will prompt for and receive the purchase price of a property and property type (residential or non-residential) and calculate the buyer’s stamp duty and print
 the value. Using a function to calculate different type of property type. Using While loop to provide re-iteration of programme.<img width="675" height="286" alt="image" src="https://github.com/user-attachments/assets/364fe4c1-a444-4a91-bb18-712dc12dfa69" /><img width="643" height="365" alt="image" src="https://github.com/user-attachments/assets/e0e62617-7cfb-4e94-bd2b-857c23b659bd" /><img width="572" height="268" alt="image" src="https://github.com/user-attachments/assets/520558d6-131c-4b8c-869a-e7bfdd5427ba" />
 
    -Programme was able to process the user's option input and identify the correct Residential property type.
@@ -74,8 +74,9 @@ the value. Using a function to calculate different type of property type. Using 
 -It is also able to identify the correct Property type to its appropriate Option(option 2).And passing the property cost to the function and computed the correct stamp duty
 -Error handling of incorrect Option entered, will prompt user to re-enter a valid option.
 
-5. Monthly Sales Tracker
-<img width="500" height="495" alt="image" src="https://github.com/user-attachments/assets/1f2b6130-a3f5-49a9-b619-f3761b2eaace" /><img width="573" height="693" alt="image" src="https://github.com/user-attachments/assets/29a35100-09f3-4e9c-bbbe-02d525bd940d" /><img width="511" height="593" alt="image" src="https://github.com/user-attachments/assets/211132bc-4295-42c1-9a00-02a9a0231daa" />   
+3.Monthly Sales Tracker
+
+   <img width="500" height="495" alt="image" src="https://github.com/user-attachments/assets/1f2b6130-a3f5-49a9-b619-f3761b2eaace" /><img width="573" height="693" alt="image" src="https://github.com/user-attachments/assets/29a35100-09f3-4e9c-bbbe-02d525bd940d" /><img width="511" height="593" alt="image" src="https://github.com/user-attachments/assets/211132bc-4295-42c1-9a00-02a9a0231daa" />   
 
    -Ability of programme to ask for user’s sales input data for every month,and are able to give a report summary on the lowest sales, highest sales, the sum of all sales(Total Sales) and Average Sales.   
 -Programme is able to process user’s choice to verify if record exist in the array. It is also able to bring user back to the menu for other choices soonafter.
