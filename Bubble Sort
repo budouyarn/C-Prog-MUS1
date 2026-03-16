@@ -1,0 +1,80 @@
+/******************************************************************************
+    bubble Sort Practise
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    // declare and initialise working storage
+    int outer = 0;  // outer loop counter
+    int inner = 0;  // inner loop counter
+    int input = 0;
+    
+    // print hte different patterns
+    printf("\n\tPattern A\n\t=========");
+    for(outer = 1; outer <= 10; outer++)
+        {
+            printf("\n\t%d\t", outer);
+            for(inner = 1; inner <= 10; inner++)
+                {
+                    printf("%d ", inner);    
+                }
+        }
+    //scanf("%d", &input);
+    
+    printf("\n\n\n\tPattern A\n\t=========");
+    for(outer = 1; outer <= 10; outer++)
+        {
+            printf("\n\touter = %d\tinner = ", outer);
+            for(inner = 1; inner <= 10; inner++)
+                {
+                    printf("%d ", inner);    
+                }
+        }
+    //scanf("%d", &input);
+    
+    printf("\n\n\n\n\tPattern B\n\t=========");
+    for(outer = 1; outer <= 10; outer++)
+        {
+            printf("\n\t%d\t", outer);
+            for(inner = outer; inner <= 10; inner++)
+                {
+                    printf("%d ", inner);    
+                }
+        }
+    //scanf("%d", &input);
+    
+    printf("\n\n\n\n\tPattern B\n\t=========");
+    for(outer = 1; outer <= 10; outer++)
+        {
+            printf("\n\touter = %d\tinner = ", outer);
+            for(inner = outer; inner <= 10; inner++)
+                {
+                    printf("%d ", inner);    
+                }
+        }
+
+    printf("\n\n\n\n\tPattern C\n\t=========");
+    for(outer = 1; outer <= 10; outer++)
+        {
+            printf("\n\t%d\t", outer);
+            for(inner = outer + 1; inner <= 10; inner++)
+                {
+                    //printf("%d ", inner);    
+                    printf("*");
+                }
+        }
+    //scanf("%d", &input);
+    
+    printf("\n\n\n\tPattern C\n\t=========");
+    for(outer = 1; outer <= 10; outer++)
+        {
+            printf("\n\touter = %d\tinner = ", outer);
+            for(inner = outer + 1; inner <= 10; inner++)
+                {
+                    printf("%d ", inner);    
+                }
+        }
+
+    return 0;
+}
