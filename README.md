@@ -1,4 +1,4 @@
-# C-Prog-MUS1
+# C-Prog-MUSem1
 C Programme Practices and Assessment for my Bachelor's Module
 
 During my first semester in Murdoch University, I was made to learn C Programme, compared to what I had learned in Python
