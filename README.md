@@ -13,20 +13,20 @@ Through my previous beginning practices learning Python coding, I was able to gr
 3. Arrays & Dynamic Arrays
 Arrays were something lightly touched on in python, where linked list were mostly more utilised back in my practices.
 
-[What is something new in C programme that I learned?]
-	-I learned so much more in saving input and storing them in an array, which then using functions to manipulate the data.
-	-Dynamic arrays were pretty much a new concept to me, where the idea of creating a dynamic array makes flows so much flexiblle. 
--Dynamic arrays uses allocating memory on the heap using malloc() and calloc().
--Including Freeing memory with free() to prevent memory leaks.
+[What is something new in C programme that I learned?]	
+-I learned so much more in saving input and storing them in an array, which then using functions to manipulate the data.	
+-Dynamic arrays were pretty much a new concept to me, where the idea of creating a dynamic array makes flows so much flexiblle. 	
+-Dynamic arrays uses allocating memory on the heap using malloc() and calloc().	
+-Including Freeing memory with free() to prevent memory leaks.	
 -Checking allocation success by verifying that returned pointers are not NULL.
 
 3. Characters and Strings
 
-[What is something new in C programme that I learned?
--Using the char data type and understanding ASCII values.
--Reading and writing individual characters with getchar() / putchar().
--Working with character arrays (C strings) and the null terminator \0.
--Using standard library functions from <string.h> such as strlen(), strcpy(), strcmp(), and strcat().
+[What is something new in C programme that I learned?	
+-Using the char data type and understanding ASCII values.	
+-Reading and writing individual characters with getchar() / putchar().	
+-Working with character arrays (C strings) and the null terminator \0.	
+-Using standard library functions from <string.h> such as strlen(), strcpy(), strcmp(), and strcat().	
 -Classifying characters using <ctype.h> functions like isalpha(), isdigit(), and toupper().
 
 Example use case: reversing a string in-place and converting it to uppercase.
@@ -34,18 +34,18 @@ Example use case: reversing a string in-place and converting it to uppercase.
 4. Pointers and Addresses
 [What is something new in C programme that I learned?]
 
--Declaring and initialising pointers using the address-of operator &.
--Dereferencing pointers with * to read and modify values.
--Pointer arithmetic — advancing through arrays by incrementing pointer addresses.
--The relationship between arrays and pointers.
--Passing pointers to functions to enable pass-by-reference behaviour.
+-Declaring and initialising pointers using the address-of operator &.	
+-Dereferencing pointers with * to read and modify values.	
+-Pointer arithmetic — advancing through arrays by incrementing pointer addresses.	
+-The relationship between arrays and pointers.	
+-Passing pointers to functions to enable pass-by-reference behaviour.	
 -Double pointers (**) for modifying pointer variables inside functions.
 
 5. Functions
 
 [What is something new in C programme that I learned?]
 
--Declaring functions with appropriate return types and parameter lists.
+-Declaring functions with appropriate return types and parameter lists.	
 -Separating function declaration (prototype) from definition.
 -Passing arguments by value and by pointer (reference).
 -Returning values from functions, including returning pointers to heap-allocated data.
@@ -69,9 +69,9 @@ Example use case: reversing a string in-place and converting it to uppercase.
 -Linear Search — explains the sequential scan approach, shows the C implementation with an early return on match, and covers best/worst case complexity (O(1) to O(n)).
 -Bubble Sort — covers the nested-loop comparison-and-swap logic, includes the swapped flag optimisation for early exit on already-sorted data, and notes best/worst case complexity (O(n) to O(n²)).
 
-Practise Index:
-	1) File 
-	2) Creating a delivery charge calculator
-	3) Creating a calculator for stamp duty of property type 
-	4) Creating a Monthly Sales Tracker\
-	5) Bubble Sort Practise
+Practise Index:		
+1) File
+2) Creating a delivery charge calculator
+3) Creating a calculator for stamp duty of property type
+4) Creating a Monthly Sales Tracker
+5)  Bubble Sort Practise
