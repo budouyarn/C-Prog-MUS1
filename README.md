@@ -1,21 +1,23 @@
 # C-Prog-MUS1
 C Programme Practices and Assessment for my Bachelor's Module
-Topics Demonstrated
+
+During my first semester in Murdoch University, I was made to learn C Programme, compared to what I had learned in Python
+
 1. Loops
-Loops are used throughout the programs to iterate over data, process user input, and drive repetitive logic. All three major loop types are covered:
+Through my previous beginning practices learning Python coding, I was able to grasp the simple mechanism behind using for loops and while loop
 
-for loop — used when the number of iterations is known in advance (e.g., iterating over array indices).
-while loop — used for condition-driven repetition (e.g., reading input until a sentinel value is entered).
-do...while loop — used when the loop body must execute at least once (e.g., menu-driven programs).
+[What is something new in C programme that I learned?]
+1) In C Programme, I further learned the exitence of a do while lopp, than just a simple while loop with no existence of an exit, such as  #include<stdbool.h> to use a True False value to control the while loop re-iterations
+2) I further explored the usage of Nested loops which can be useful when processing 2D arrays or generating patterns. Especially when it comes to swapping of values in order to facilitate linear search functions.
 
-Nested loops are also demonstrated where appropriate, such as when processing 2D arrays or generating patterns.
+3. Arrays & Dynamic Arrays
+Arrays were something lightly touched on in python, where linked list were mostly more utilised back in my practices.
 
-2. Dynamic Arrays
-Dynamic memory allocation allows programs to manage memory at runtime rather than compile time. This section demonstrates:
-
-Allocating memory on the heap using malloc() and calloc().
-Resizing allocations using realloc() when the data size is unknown in advance.
-Freeing memory with free() to prevent memory leaks.
+[What is something new in C programme that I learned?]
+	I learned so much more in saving input and storing them in an array, which then using functions to manipulate the data.
+	Dynamic arrays were pretty much a new concept to me, where the idea of creating a dynamic array makes flows so much flexiblle. 
+Dynamic arrays uses allocating memory on the heap using malloc() and calloc().
+Including Freeing memory with free() to prevent memory leaks.
 Checking allocation success by verifying that returned pointers are not NULL.
 
 Example use case: building a dynamically growing list of integers entered by the user.
@@ -26,8 +28,8 @@ if (arr == NULL) {
 }
 
 3. Characters and Strings
-This section covers character-level operations and string manipulation in C:
 
+[What is something new in C programme that I learned?
 Using the char data type and understanding ASCII values.
 Reading and writing individual characters with getchar() / putchar().
 Working with character arrays (C strings) and the null terminator \0.
@@ -37,7 +39,7 @@ Classifying characters using <ctype.h> functions like isalpha(), isdigit(), and 
 Example use case: reversing a string in-place and converting it to uppercase.
 
 4. Pointers and Addresses
-Pointers are one of C's most powerful (and most challenging) features. This section demonstrates a solid understanding of:
+[What is something new in C programme that I learned?]
 
 Declaring and initialising pointers using the address-of operator &.
 Dereferencing pointers with * to read and modify values.
@@ -54,7 +56,8 @@ printf("Address: %p\n", (void *)ptr);
 printf("Via ptr: %d\n", *ptr);
 
 5. Functions
-Functions are the building blocks of structured programming. This section demonstrates:
+
+[What is something new in C programme that I learned?]
 
 Declaring functions with appropriate return types and parameter lists.
 Separating function declaration (prototype) from definition.
@@ -65,6 +68,8 @@ Recursive functions — functions that call themselves to solve problems like fa
 All functions follow a single-responsibility principle: each function does one thing and does it well.
 
 6. Modularity
+
+[What is something new in C programme that I learned?]
 Good C programs are split across multiple files for maintainability and reuse. This project demonstrates modularity through:
 
 Header files (.h) — contain function prototypes, constants (#define), and type definitions shared across files.
@@ -99,6 +104,12 @@ assessment/
 │
 └── Makefile            # Build rules for compiling all modules
 
+7.Sorting Algorithms
+[What is something new in C programme that I learned?]
+Linear Search — explains the sequential scan approach, shows the C implementation with an early return on match, and covers best/worst case complexity (O(1) to O(n)).
+Bubble Sort — covers the nested-loop comparison-and-swap logic, includes the swapped flag optimisation for early exit on already-sorted data, and notes best/worst case complexity (O(n) to O(n²)).
+
+Extras:
 How to Compile and Run
 Requirements
 
@@ -120,5 +131,5 @@ bash./assessment
 Clean build artefacts
 bashmake clean
 
-Key Concepts Summary
+
 TopicConcepts ShownLoopsfor, while, do...while, nested loopsDynamic Arraysmalloc, calloc, realloc, free, NULL checksCharacterschar, ASCII, <string.h>, <ctype.h>, C stringsPointers&, *, arithmetic, double pointers, pass-by-referenceFunctionsPrototypes, scope, recursion, return valuesModularityHeader files, source separation, include guards, Makefile
