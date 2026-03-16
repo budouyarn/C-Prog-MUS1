@@ -1,0 +1,62 @@
+/******************************************************************************
+    FILE i/o exercises: open, write, read, display a file contents, close file
+*******************************************************************************/
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    // declare and initialise working storage
+    FILE *fptr = NULL;
+    int counter = 0;    // genric loop counter
+    int modNum = 0;     // holds the number of modules in the text file
+    char modBuffer[50];   // buffer to hold the read contents from the text file
+    
+    // open the file for writing (overwrite if exists)
+    fptr = fopen("module.txt", "w+");
+    if (fptr == NULL) 
+        {
+            printf("\n\n\t\tError opening file!!! Operation terminated!!!");
+            perror("Error opening file for writing");
+            exit(1);
+        }
+    else
+        {
+            // write the file contents  
+            fprintf(fptr, "5\n");
+            fprintf(fptr, "Computer Science\n");
+            fprintf(fptr, "IDC\n");
+            fprintf(fptr, "FCS\n");            
+            fprintf(fptr, "ICS\n");            
+            fprintf(fptr, "SAD\n");            
+        }
+        
+    // close the file
+    fclose(fptr);
+    
+    // open the file for reading
+    fptr = fopen("module.txt", "r");
+    if (fptr == NULL) 
+        {
+            printf("\n\n\t\tError opening file!!! Operation terminated!!!");
+            perror("Error opening file for writing");
+            // exit();
+        }
+    else
+        {
+            // read the file contents and display  
+            fscanf(fptr, "%d", &modNum);
+            printf("\n\n\tModule number : %d", modNum);
+            for(counter = 0; counter < modNum; counter++)
+                {
+                    fscanf(fptr, " %[^\n]s", modBuffer);
+                    printf("\n\tModule name : %s", modBuffer);                   
+                }
+        }    
+    
+    // close the file
+    fclose(fptr);
+
+    return 0;
+}
