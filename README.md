@@ -70,8 +70,8 @@ Example use case: reversing a string in-place and converting it to uppercase.
 -Bubble Sort — covers the nested-loop comparison-and-swap logic, includes the swapped flag optimisation for early exit on already-sorted data, and notes best/worst case complexity (O(n) to O(n²)).
 
 Practise Index:
-1)File 
-2) Creating a delivery charge calculator
-3) Creating a calculator for stamp duty of property type 
-4) Creating a Monthly Sales Tracker\
-5)Bubble Sort Practise
+	1) File 
+	2) Creating a delivery charge calculator
+	3) Creating a calculator for stamp duty of property type 
+	4) Creating a Monthly Sales Tracker\
+	5) Bubble Sort Practise
